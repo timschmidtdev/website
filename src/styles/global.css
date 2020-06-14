@@ -33,6 +33,14 @@ a:active {
   color: #e85d04;
 }
 
+a.active svg {
+  fill: #faa307;
+}
+
+a.active div {
+  color: #faa307;
+}
+
 svg {
   fill: #e5e5e5;
 }
@@ -44,6 +52,8 @@ svg:hover {
 svg:active {
   fill: #e85d04;
 }
+
+
 
 @media (min-width: 62rem) {
   body {
