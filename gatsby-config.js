@@ -6,5 +6,19 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  siteMetadata: {
+    title: 'Tim Schmidt Website'
+  },
+  plugins: [
+    {
+      resolve: 'gatsby-plugin-google-fonts',
+      options: {
+        fonts: [
+          'Lato',
+          'Roboto Slab',
+        ],
+        display: 'swap',
+      }
+    }
+  ],
 }
