@@ -10,7 +10,9 @@ export default function Code() {
     <Container>
       <Header headerText="Some Dev Projects"/>
       <h2><a href="http://floating-anchorage-79232.herokuapp.com/" target="_blank" rel="noreferrer">Leave Calculator</a></h2>
-      <p>A rails app that will definitely take 30 seconds to load since no one uses it</p>
+      <p>A rails app that will definitely take 30 seconds to load since no one uses it.</p>
+      <br/>
+      <p>eeesh... pretty barren here. Maybe I'll make more personal projects soon.</p>
       <Nav />
     </Container>
   )

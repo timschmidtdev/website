@@ -9,7 +9,8 @@ export default function Knitting() {
   return (
     <Container>
       <Header headerText="Knitting"/>
-      <p>A place for machine knit designs, patterns, and technical concepts</p>
+      <p>A place for machine knit designs, patterns, and technical concepts.</p>
+      <p>It would be nice to add user login through Google & Twitter so people could add comments.</p>
       <Nav />
     </Container>
   )

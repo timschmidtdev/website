@@ -3,10 +3,12 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 
 const NavContainer = styled.nav`
-  position: absolute;
-  bottom: 1rem;
+  position: fixed;
+  bottom: 0;
+  padding: 1rem 0;
   left: 0;
   width: 100%;
+  background-color: #0f1a30;
 `
 
 const NavItems = styled.div`
