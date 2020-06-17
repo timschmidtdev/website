@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Layout from "../components/layout"
 import Header from "../components/header"
+import SEO from "../components/seo"
 
 const StyledImg = styled.div`
   background-image: ${props => `url(${props.smallImage})`};
@@ -25,6 +26,7 @@ const ProjectImage = props => (
 export default function Code() {
   return (
     <Layout>
+      <SEO title="Code" description="Coding projects made by Tim"/>
       <Header headerText="Some Dev Projects"/>
       <ProjectImage
         alt="Leave Calculator"

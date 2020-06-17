@@ -7,7 +7,9 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: 'Tim Schmidt Website'
+    title: 'Tim Schmidt',
+    description: 'Just another personal website',
+    author: 'Tim Schmidt',
   },
   plugins: [
     {
@@ -28,5 +30,20 @@ module.exports = {
         }
       }
     },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'Tim Schmidt',
+        short_name: 'Tim Schmidt',
+        description: 'Just another personal website',
+        start_url: '/',
+        background_color: '#14213d',
+        theme_color: '#14213d',
+        display: 'standalone',
+        icon: 'src/assets/images/favicon.png'
+      }
+    },
+    'gatsby-plugin-offline',
+    'gatsby-plugin-react-helmet',
   ],
 }

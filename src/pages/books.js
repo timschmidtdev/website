@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Layout from "../components/layout"
 import Header from "../components/header"
+import SEO from "../components/seo"
 
 const StyledUl = styled.ul`
   line-height: 1.5rem;
@@ -26,6 +27,7 @@ const Book = props => (
 export default function Books() {
   return (
     <Layout>
+      <SEO title="Books" description="Books recommended by Tim"/>
       <Header headerText="Book List"/>
       <h2>Up Next</h2>
       <StyledUl>

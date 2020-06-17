@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Layout from "../components/layout"
 import Header from "../components/header"
+import SEO from "../components/seo"
 import Instagram from "../assets/icons/instagram.svg"
 import Twitter from "../assets/icons/twitter.svg"
 import Github from "../assets/icons/github.svg"
@@ -14,6 +15,7 @@ const StyledLink = styled.a`
 export default function Contact() {
   return (
     <Layout>
+      <SEO title="Contact" description="Contact Tim through social media or complete the form"/>
       <Header headerText="@timschmidtdev"/>
       <StyledLink href="https://www.instagram.com/timschmidtdev/" target="_blank" rel="noreferrer">
         <Instagram />
