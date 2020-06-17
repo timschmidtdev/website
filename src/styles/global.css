@@ -3,8 +3,6 @@ html {
 }
 
 body {
-  margin: 0 2rem 10rem 2rem;
-  padding: 0;
   color: #e5e5e5;
   font-family: Roboto Slab, Georgia, 'Times New Roman', Times, serif;
 }
@@ -51,12 +49,4 @@ svg:hover {
 
 svg:active {
   fill: #e85d04;
-}
-
-
-
-@media (min-width: 62rem) {
-  body {
-    margin: 4rem 16rem 10rem 16rem;
-  }
 }
