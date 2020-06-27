@@ -32,6 +32,8 @@ export default function Books() {
       <h2>Up Next</h2>
       <StyledUl>
         <Book author="Patricia Highsmith" url="https://www.goodreads.com/cs/book/show/52258.The_Price_of_Salt" title="The Price of Salt" year="1952"/>
+        <Book author="Ta-Nehisi Coates" url="https://www.goodreads.com/book/show/33916061-we-were-eight-years-in-power" title="We Were Eight Years in Power: An American Tragedy" year="2017"/>
+        <Book author="Eboo Patel" url="https://www.goodreads.com/book/show/797385.Acts_of_Faith" title="Acts of Faith: The Story of an American Muslim, the Struggle for the Soul of a Generation" year="2007"/>
       </StyledUl>
       <h2>Some Favorites</h2>
       <StyledUl>
