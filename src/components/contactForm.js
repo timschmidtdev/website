@@ -2,40 +2,95 @@ import React from "react"
 import styled from "styled-components"
 
 const StyledForm = styled.form`
-  margin-top: 1rem;
   display: flex;
   flex-direction: column;
-  height: 26rem;
   justify-content: space-around;
+  margin-top: 1rem;
 `
 
 const StyledLabel = styled.label`
   display: flex;
   flex-direction: column;
+  margin-bottom: 0.75rem;
+`
+
+const StyledInput = styled.input`
+  background-color: #a7b5d4;
+  border-radius: 0.2rem;
+  border: none;
+  font-family: Lato, Arial, Helvetica, sans-serif;
+  margin: 0.25rem 0;
+  padding: 0.5rem;
+`
+
+const StyledTextArea = styled.textarea`
+  background-color: #a7b5d4;
+  border-radius: 0.2rem;
+  border: none;
+  font-family: Lato, Arial, Helvetica, sans-serif;
+  margin: 0.25rem 0;
+  padding: 0.5rem;
+`
+
+const Actions = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 1rem;
+`
+
+const Submit = styled.button`
+  font-family: Roboto Slab, Georgia, "Times New Roman", Times, serif;
+  line-height: 2rem;
+  margin: 0 1rem;
+  width: 5rem;
+`
+
+const Clear = styled.input`
+  font-family: Roboto Slab, Georgia, "Times New Roman", Times, serif;
+  line-height: 2rem;
+  margin: 0 1rem;
+  width: 5rem;
 `
 
 export default function ContactForm() {
   return (
-    <StyledForm method="POST" action="https://getform.io/f/394deb70-e23d-4dac-9bc7-82243bf2c679">
-      <p>ooof... rough styling. I'll get around to it.</p>
+    <StyledForm
+      method="POST"
+      action="https://getform.io/f/394deb70-e23d-4dac-9bc7-82243bf2c679"
+    >
       <StyledLabel>
         Name
-        <input type="text" name="name" id="name" aria-label="name"/>
+        <StyledInput type="text" name="name" id="name" aria-label="name" />
       </StyledLabel>
       <StyledLabel>
         Email
-        <input type="email" name="email" id="email" aria-label="email"/>
+        <StyledInput type="email" name="email" id="email" aria-label="email" />
       </StyledLabel>
       <StyledLabel>
         Subject
-        <input type="text" name="subject" id="subject" aria-label="subject"/>
+        <StyledInput
+          type="text"
+          name="subject"
+          id="subject"
+          aria-label="subject"
+        />
       </StyledLabel>
       <StyledLabel>
         Message
-        <textarea name="message" id="message" rows="5" aria-label="message"/>
+        <StyledTextArea
+          name="message"
+          id="message"
+          rows="5"
+          aria-label="message"
+        />
       </StyledLabel>
-      <button type="submit" aria-label="submit">Submit</button>
-      <input type="reset" value="Clear" aria-label="clear form"/>
+      <Actions>
+        <Submit type="submit" aria-label="submit">
+          Submit
+        </Submit>
+        <Clear type="reset" value="Clear" aria-label="clear form" />
+      </Actions>
     </StyledForm>
   )
 }

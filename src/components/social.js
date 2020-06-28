@@ -14,16 +14,32 @@ const StyledLink = styled.a`
 export default function Social() {
   return (
     <Container>
-      <StyledLink href="https://www.instagram.com/timschmidtdev/" target="_blank" rel="noreferrer">
+      <StyledLink
+        href="https://www.instagram.com/timschmidtdev/"
+        target="_blank"
+        rel="noreferrer"
+      >
         <Instagram />
       </StyledLink>
-      <StyledLink href="https://twitter.com/timschmidtdev" target="_blank" rel="noreferrer">
+      <StyledLink
+        href="https://twitter.com/timschmidtdev"
+        target="_blank"
+        rel="noreferrer"
+      >
         <Twitter />
       </StyledLink>
-      <StyledLink href="https://github.com/timschmidtdev" target="_blank" rel="noreferrer">
+      <StyledLink
+        href="https://github.com/timschmidtdev"
+        target="_blank"
+        rel="noreferrer"
+      >
         <Github />
       </StyledLink>
-      <StyledLink href="https://linkedin.com/in/timothyjschmidt" target="_blank" rel="noreferrer">
+      <StyledLink
+        href="https://linkedin.com/in/timothyjschmidt"
+        target="_blank"
+        rel="noreferrer"
+      >
         <Linkedin />
       </StyledLink>
     </Container>
