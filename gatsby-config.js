@@ -1,11 +1,4 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
-
 module.exports = {
-  /* Your site config here */
   siteMetadata: {
     title: 'Tim Schmidt',
     description: 'Just another personal website',
@@ -43,6 +36,22 @@ module.exports = {
         icon: 'src/assets/images/favicon.png'
       }
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/assets/`
+      }
+    },
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        useMozJpeg: false,
+        stripeMetadata: true,
+        defaultQuality: 75,
+      }
+    },
+    `gatsby-transformer-sharp`,
     'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
   ],
