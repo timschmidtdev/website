@@ -1,30 +1,21 @@
 import React from "react"
 import Layout from "../components/layout"
 import Header from "../components/header"
-import Img from "gatsby-image"
+import Project from "../components/project"
 import SEO from "../components/seo"
-
-const ProjectImg = props => (
-  <a href={props.url} target="_blank" rel="noreferrer">
-    <Img fluid={props.image} alt={props.altText} />
-  </a>
-)
 
 export default function Code({ data }) {
   return (
     <Layout>
       <SEO title="Code" description="Coding projects made by Tim" />
       <Header headerText="Some Dev Projects" />
-      <ProjectImg
-        image={data.fileName.childImageSharp.fluid}
+      <Project
         alt="Leave Calculator homepage"
+        description="A rails app that will definitely take 30 seconds to load since no one uses it."
+        image={data.fileName.childImageSharp.fluid}
         url="http://floating-anchorage-79232.herokuapp.com/"
+        repo="https://github.com/timschmidtdev/rails_leave_calculator"
       />
-      <p>
-        A rails app that will definitely take 30 seconds to load since no one
-        uses it.
-      </p>
-      <br />
     </Layout>
   )
 }
