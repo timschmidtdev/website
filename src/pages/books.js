@@ -32,12 +32,6 @@ export default function Books() {
       <h2>Up Next</h2>
       <StyledUl>
         <Book
-          author="Patricia Highsmith"
-          url="https://www.goodreads.com/cs/book/show/52258.The_Price_of_Salt"
-          title="The Price of Salt"
-          year="1952"
-        />
-        <Book
           author="Ta-Nehisi Coates"
           url="https://www.goodreads.com/book/show/33916061-we-were-eight-years-in-power"
           title="We Were Eight Years in Power: An American Tragedy"
@@ -75,6 +69,12 @@ export default function Books() {
           url="http://www.goodreads.com/book/show/31933250-al-franken-giant-of-the-senate"
           title="Al Franken, Giant of the Senate"
           year="2017"
+        />
+        <Book
+          author="Patricia Highsmith"
+          url="https://www.goodreads.com/cs/book/show/52258.The_Price_of_Salt"
+          title="The Price of Salt"
+          year="1952"
         />
         <Book
           author="Daniel Kahneman"

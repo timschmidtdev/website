@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import Header from "../components/header"
 import Project from "../components/project"
+import { graphql } from "gatsby"
 import SEO from "../components/seo"
 
 export default function Code({ data }) {
