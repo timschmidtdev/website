@@ -38,7 +38,7 @@ export default function Nav(props) {
         <Link to="/" getProps={isActive} {...props}>
           <Home />
         </Link>
-        <Link to="/knitting/" getProps={isActive} {...props}>
+        <Link to="/blog/" getProps={isActive} {...props}>
           <Yarn />
         </Link>
         <Link to="/books/" getProps={isActive} {...props}>

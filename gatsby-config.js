@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: "Tim Schmidt",
@@ -46,6 +50,13 @@ module.exports = {
         useMozJpeg: false,
         stripeMetadata: true,
         defaultQuality: 75,
+      },
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_DELIVERY_API_TOKEN,
       },
     },
     `gatsby-transformer-sharp`,

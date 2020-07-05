@@ -1,3 +1,3 @@
-Just another personal website. That's it.
+Just another [personal website](https://timschmidt.dev/). That's it.
 
 Built with React & Gatsby.
