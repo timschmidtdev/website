@@ -35,19 +35,19 @@ export default function Nav(props) {
   return (
     <NavContainer>
       <NavItems>
-        <Link to="/" getProps={isActive} {...props}>
+        <Link to="/" title="Home" getProps={isActive} {...props}>
           <Home />
         </Link>
-        <Link to="/blog/" getProps={isActive} {...props}>
+        <Link to="/blog/" title="Blog" getProps={isActive} {...props}>
           <Yarn />
         </Link>
-        <Link to="/books/" getProps={isActive} {...props}>
+        <Link to="/books/" title="Books" getProps={isActive} {...props}>
           <Book />
         </Link>
-        <Link to="/code/" getProps={isActive} {...props}>
+        <Link to="/code/" title="Dev Projects" getProps={isActive} {...props}>
           <Code />
         </Link>
-        <Link to="/contact/" getProps={isActive} {...props}>
+        <Link to="/contact/" title="Contact" getProps={isActive} {...props}>
           <AtDiv>@</AtDiv>
         </Link>
       </NavItems>
