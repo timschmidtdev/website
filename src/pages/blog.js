@@ -10,7 +10,7 @@ export default function Blog({ data }) {
     <Layout>
       <SEO title="Blog" description="A blog covering a broad range of topics" />
       <Header headerText="Blog" />
-      <p>This content will cover a broad range of things like:</p>
+      <p>This content covers a broad range of things like:</p>
       <ul>
         <li>Machine knit designs, patterns, and technical concepts</li>
         <li>Software developer topics</li>

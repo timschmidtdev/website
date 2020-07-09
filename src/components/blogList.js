@@ -3,10 +3,13 @@ import styled from "styled-components"
 
 const BlogListContainer = styled.div``
 
-const PostContainer = styled.a`
+const PostContainerLink = styled.a`
   margin: 2rem 0;
   display: flex;
-  flex-diretion: row;
+  flex-direction: column;
+  @media (min-width: 45rem) {
+    flex-direction: row;
+  }
 `
 
 const StyledImage = styled.img`
@@ -18,12 +21,12 @@ const StyledImage = styled.img`
 const PostDetails = styled.div``
 
 const BlogList = ({ data }) => {
-  data.allContentfulPost.edges.forEach(post => console.log(post.node))
   return (
     <BlogListContainer>
       {data.allContentfulPost.edges.map(post => {
+        const url = `/${post.node.title.toLowerCase().split(" ").join("-")}`
         return (
-          <PostContainer>
+          <PostContainerLink href={url}>
             <StyledImage
               alt={post.node.titleImage.title}
               src={post.node.titleImage.file.url}
@@ -33,7 +36,7 @@ const BlogList = ({ data }) => {
               <h4>{post.node.subTitle}</h4>
               <p>{post.node.createdAt}</p>
             </PostDetails>
-          </PostContainer>
+          </PostContainerLink>
         )
       })}
     </BlogListContainer>
