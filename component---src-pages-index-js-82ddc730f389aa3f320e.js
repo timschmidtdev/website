@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{RXBc:function(e,n,t){"use strict";t.r(n),t.d(n,"default",(function(){return r}));var a=t("q1tI"),l=t.n(a),c=t("Bl7J"),i=t("LbRr");function r(){return l.a.createElement(c.a,null,l.a.createElement(i.a,{headerText:"Tim Schmidt"}),l.a.createElement("p",null,"Hi! I'm Tim."),l.a.createElement("p",null,"I'm a developer."),l.a.createElement("p",null,"I also like machine knitting, cycling, running, and cross country skiing."))}}}]);
-//# sourceMappingURL=component---src-pages-index-js-82ddc730f389aa3f320e.js.map
