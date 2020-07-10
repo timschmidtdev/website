@@ -31,11 +31,14 @@ export const query = graphql`
           subTitle
           title
           titleImage {
-            file {
-              url
-            }
             title
+            fluid(quality: 10) {
+              base64
+              srcWebp
+              srcSetWebp
+            }
           }
+          updatedAt(formatString: "MMMM Do, YYYY")
           id
           body {
             content {
@@ -44,6 +47,7 @@ export const query = graphql`
               }
             }
           }
+          node_locale
         }
       }
     }

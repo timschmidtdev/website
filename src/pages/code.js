@@ -6,6 +6,7 @@ import { graphql } from "gatsby"
 import SEO from "../components/seo"
 
 export default function Code({ data }) {
+  console.log(data.fileName.childImageSharp.fluid)
   return (
     <Layout>
       <SEO title="Code" description="Coding projects made by Tim" />

@@ -2,22 +2,54 @@ import React from "react"
 import Layout from "../components/layout"
 import { graphql } from "gatsby"
 import styled from "styled-components"
+import Img from "gatsby-image"
 
-const PostContainer = styled.div``
+const PostContainer = styled.div`
+  margin-top: 4rem;
+`
+
+const PostImg = styled(Img)`
+  width: 100%;
+  height: 12rem;
+  @media (min-width: 45rem) {
+    width: 30rem;
+    margin-bottom: 2rem;
+  }
+`
+
+const TitleContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
+const Dates = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`
+
+const BodyContainer = styled.div``
 
 export default function BlogPost({ data }) {
   const post = data.contentfulPost
+  const updated = () => {
+    if (post.createdAt !== post.updatedAt) {
+      return <p>Updated: {post.updatedAt}</p>
+    }
+  }
   return (
     <Layout>
       <PostContainer>
-        <div>
+        <TitleContainer>
+          <PostImg alt={post.titleImage.title} fluid={post.titleImage.fluid} />
           <h1>{post.title}</h1>
-          <div>{post.body.content[0].content[0].value}</div>
-        </div>
-        <p>
-          Going to need a little more styling for these posts. At least they're
-          programmatically created.
-        </p>
+        </TitleContainer>
+        <Dates>
+          {updated()}
+          <p>Published: {post.createdAt}</p>
+        </Dates>
+        <BodyContainer>{post.body.content[0].content[0].value}</BodyContainer>
       </PostContainer>
     </Layout>
   )
@@ -31,12 +63,14 @@ export const query = graphql`
       subTitle
       title
       titleImage {
-        file {
-          url
-        }
         title
+        fluid(quality: 10) {
+          base64
+          srcWebp
+          srcSetWebp
+        }
       }
-      updatedAt
+      updatedAt(formatString: "MMMM Do, YYYY")
       body {
         content {
           content {

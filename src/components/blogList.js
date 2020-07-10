@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import Img from "gatsby-image"
 
 const BlogListContainer = styled.div``
 
@@ -12,13 +13,29 @@ const PostContainerLink = styled.a`
   }
 `
 
-const StyledImage = styled.img`
-  width: 20rem;
-  margin-right: 2rem;
+const StyledImage = styled(Img)`
+  min-width: 100%;
+  height: 10rem;
   border-radius: 0.2rem;
+  @media (min-width: 45rem) {
+    min-width: 20rem;
+    margin-right: 2rem;
+  }
 `
 
-const PostDetails = styled.div``
+const PostDetails = styled.div`
+  text-align: center;
+  @media (min-width: 45rem) {
+    text-align: left;
+  }
+`
+
+const StyledH1 = styled.h1`
+  margin: 1rem;
+  @media (min-width: 45rem) {
+    margin: auto;
+  }
+`
 
 const BlogList = ({ data }) => {
   return (
@@ -29,12 +46,12 @@ const BlogList = ({ data }) => {
           <PostContainerLink href={url}>
             <StyledImage
               alt={post.node.titleImage.title}
-              src={post.node.titleImage.file.url}
+              fluid={post.node.titleImage.fluid}
             />
             <PostDetails>
-              <h1>{post.node.title}</h1>
+              <StyledH1>{post.node.title}</StyledH1>
               <h4>{post.node.subTitle}</h4>
-              <p>{post.node.createdAt}</p>
+              <p>{post.node.updatedAt}</p>
             </PostDetails>
           </PostContainerLink>
         )
