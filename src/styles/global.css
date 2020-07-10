@@ -1,10 +1,11 @@
 html {
-  background-color:#14213d;
+  background-color: #14213d;
 }
 
 body {
   color: #e5e5e5;
-  font-family: Roboto Slab, Georgia, 'Times New Roman', Times, serif;
+  font-family: Roboto Slab, Georgia, "Times New Roman", Times, serif;
+  font-size: 130%;
 }
 
 h1 {
@@ -49,4 +50,10 @@ svg:hover {
 
 svg:active {
   fill: #e85d04;
+}
+
+@media (min-width: 45rem) {
+  body {
+    font-size: 100%;
+  }
 }

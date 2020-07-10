@@ -25,17 +25,22 @@ const TitleContainer = styled.div`
 
 const Dates = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
 `
 
-const BodyContainer = styled.div``
+const DateP = styled.p`
+  margin: 0;
+`
+
+const BodyContainer = styled.div`
+  margin-top: 2rem;
+`
 
 export default function BlogPost({ data }) {
   const post = data.contentfulPost
   const updated = () => {
     if (post.createdAt !== post.updatedAt) {
-      return <p>Updated: {post.updatedAt}</p>
+      return <DateP>Updated: {post.updatedAt}</DateP>
     }
   }
   return (
@@ -47,7 +52,7 @@ export default function BlogPost({ data }) {
         </TitleContainer>
         <Dates>
           {updated()}
-          <p>Published: {post.createdAt}</p>
+          <DateP>Published: {post.createdAt}</DateP>
         </Dates>
         <BodyContainer>{post.body.content[0].content[0].value}</BodyContainer>
       </PostContainer>
