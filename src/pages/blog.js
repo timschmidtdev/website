@@ -2,8 +2,8 @@ import React from "react"
 import Layout from "../components/layout"
 import Header from "../components/header"
 import BlogList from "../components/blogList"
-import SEO from "../components/seo"
 import { graphql } from "gatsby"
+import SEO from "../components/seo"
 
 export default function Blog({ data }) {
   return (
@@ -27,7 +27,9 @@ export const query = graphql`
     allContentfulPost {
       edges {
         node {
+          id
           createdAt(formatString: "MMMM Do, YYYY")
+          updatedAt(formatString: "MMMM Do, YYYY")
           subTitle
           title
           titleImage {
@@ -38,8 +40,6 @@ export const query = graphql`
               srcSetWebp
             }
           }
-          updatedAt(formatString: "MMMM Do, YYYY")
-          id
           body {
             content {
               content {

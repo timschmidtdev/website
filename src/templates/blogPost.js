@@ -7,20 +7,20 @@ import Img from "gatsby-image"
 const PostContainer = styled.div`
   margin-top: 4rem;
 `
-
-const PostImg = styled(Img)`
-  width: 100%;
-  height: 12rem;
-  @media (min-width: 45rem) {
-    width: 30rem;
-    margin-bottom: 2rem;
-  }
-`
-
 const TitleContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+`
+
+const PostImg = styled(Img)`
+  width: 100%;
+  height: 12rem;
+  border-radius: 0.2rem;
+  @media (min-width: 45rem) {
+    width: 30rem;
+    margin-bottom: 2rem;
+  }
 `
 
 const Dates = styled.div`
@@ -65,6 +65,7 @@ export const query = graphql`
     contentfulPost(id: { eq: $id }) {
       id
       createdAt(formatString: "MMMM Do, YYYY")
+      updatedAt(formatString: "MMMM Do, YYYY")
       subTitle
       title
       titleImage {
@@ -75,7 +76,6 @@ export const query = graphql`
           srcSetWebp
         }
       }
-      updatedAt(formatString: "MMMM Do, YYYY")
       body {
         content {
           content {
