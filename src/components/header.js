@@ -3,8 +3,9 @@ import styled from "styled-components"
 
 const StyledHeader = styled.h1`
   margin-bottom: 3rem;
+  text-align: center;
 `
 
-export default function Header(props) {
-  return <StyledHeader>{props.headerText}</StyledHeader>
-}
+const Header = props => <StyledHeader>{props.headerText}</StyledHeader>
+
+export default Header

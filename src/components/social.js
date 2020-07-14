@@ -5,43 +5,56 @@ import Twitter from "../assets/icons/twitter.svg"
 import Github from "../assets/icons/github.svg"
 import Linkedin from "../assets/icons/linkedin.svg"
 
-const Container = styled.div``
-
-const StyledLink = styled.a`
-  margin-right: 1.5rem;
+const Container = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 `
 
-export default function Social() {
+const LinkContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 17rem;
+`
+
+const StyledLink = styled.a``
+
+const Social = () => {
   return (
     <Container>
-      <StyledLink
-        href="https://www.instagram.com/timschmidtdev/"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <Instagram />
-      </StyledLink>
-      <StyledLink
-        href="https://twitter.com/timschmidtdev"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <Twitter />
-      </StyledLink>
-      <StyledLink
-        href="https://github.com/timschmidtdev"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <Github />
-      </StyledLink>
-      <StyledLink
-        href="https://linkedin.com/in/timothyjschmidt"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <Linkedin />
-      </StyledLink>
+      <LinkContainer>
+        <StyledLink
+          href="https://www.instagram.com/timschmidtdev/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Instagram />
+        </StyledLink>
+        <StyledLink
+          href="https://twitter.com/timschmidtdev"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Twitter />
+        </StyledLink>
+        <StyledLink
+          href="https://github.com/timschmidtdev"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Github />
+        </StyledLink>
+        <StyledLink
+          href="https://linkedin.com/in/timothyjschmidt"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Linkedin />
+        </StyledLink>
+      </LinkContainer>
     </Container>
   )
 }
+
+export default Social

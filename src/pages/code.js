@@ -2,20 +2,10 @@ import React from "react"
 import Layout from "../components/layout"
 import Header from "../components/header"
 import CodeList from "../components/codeList"
-import { graphql } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import SEO from "../components/seo"
 
-export default function Code({ data }) {
-  return (
-    <Layout>
-      <SEO title="Code" description="Coding projects made by Tim" />
-      <Header headerText="Some Dev Projects" />
-      <CodeList data={data} />
-    </Layout>
-  )
-}
-
-export const query = graphql`
+const codeQuery = graphql`
   query {
     allContentfulProject {
       edges {
@@ -35,3 +25,16 @@ export const query = graphql`
     }
   }
 `
+
+const Code = () => {
+  const data = useStaticQuery(codeQuery)
+  return (
+    <Layout>
+      <SEO title="Code" description="A few of my coding projects" />
+      <Header headerText="Some Dev Projects" />
+      <CodeList data={data} />
+    </Layout>
+  )
+}
+
+export default Code

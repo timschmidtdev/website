@@ -24,7 +24,7 @@ const Book = props => (
   </StyledLi>
 )
 
-export default function Books() {
+const Books = () => {
   return (
     <Layout>
       <SEO title="Books" description="Books recommended by Tim" />
@@ -131,3 +131,5 @@ export default function Books() {
     </Layout>
   )
 }
+
+export default Books

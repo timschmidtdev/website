@@ -29,11 +29,21 @@ const Dates = styled.div`
 `
 
 const DateP = styled.p`
+  font-size: 75%;
   margin: 0;
 `
 
 const BodyContainer = styled.div`
   margin-top: 2rem;
+  a {
+    color: #faa307;
+    &:hover {
+      color: #e85d04;
+    }
+    &:active {
+      color: #faa307;
+    }
+  }
 `
 
 export default function BlogPost({ data }) {
@@ -54,7 +64,12 @@ export default function BlogPost({ data }) {
           {updated()}
           <DateP>Published: {post.createdAt}</DateP>
         </Dates>
-        <BodyContainer>{post.body.content[0].content[0].value}</BodyContainer>
+        <BodyContainer
+          className="post-content"
+          dangerouslySetInnerHTML={{
+            __html: post.body.childMarkdownRemark.html,
+          }}
+        ></BodyContainer>
       </PostContainer>
     </Layout>
   )
@@ -77,10 +92,8 @@ export const query = graphql`
         }
       }
       body {
-        content {
-          content {
-            value
-          }
+        childMarkdownRemark {
+          html
         }
       }
     }

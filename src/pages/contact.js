@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 import Social from "../components/social"
 import ContactForm from "../components/contactForm"
 
-export default function Contact() {
+const Contact = () => {
   return (
     <Layout>
       <SEO
@@ -18,3 +18,5 @@ export default function Contact() {
     </Layout>
   )
 }
+
+export default Contact

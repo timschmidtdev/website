@@ -31,7 +31,7 @@ const isActive = ({ isCurrent }) => {
   return isCurrent ? { className: "active" } : {}
 }
 
-export default function Nav(props) {
+const Nav = props => {
   return (
     <NavContainer>
       <NavItems>
@@ -54,3 +54,5 @@ export default function Nav(props) {
     </NavContainer>
   )
 }
+
+export default Nav

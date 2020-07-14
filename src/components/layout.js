@@ -11,7 +11,7 @@ const Container = styled.div`
   }
 `
 
-export default function Layout({ children }) {
+const Layout = ({ children }) => {
   return (
     <Container>
       {children}
@@ -19,3 +19,5 @@ export default function Layout({ children }) {
     </Container>
   )
 }
+
+export default Layout

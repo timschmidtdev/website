@@ -53,7 +53,7 @@ const Clear = styled.input`
   width: 5rem;
 `
 
-export default function ContactForm() {
+const ContactForm = () => {
   return (
     <StyledForm
       method="POST"
@@ -94,3 +94,5 @@ export default function ContactForm() {
     </StyledForm>
   )
 }
+
+export default ContactForm
