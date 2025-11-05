@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import Header from './components/Header'
 import Hero from './components/Hero'
-import Skills from './components/Skills'
 import CraftCamp from './components/CraftCamp'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
@@ -31,7 +30,6 @@ function App() {
       <Header theme={theme} toggleTheme={toggleTheme} />
       <main>
         <Hero />
-        <Skills />
         <CraftCamp />
         <Contact />
       </main>

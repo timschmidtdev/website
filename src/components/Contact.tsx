@@ -30,7 +30,26 @@ function Contact() {
   return (
     <section id="contact" className="contact">
       <h2 className="section-title">Get In Touch</h2>
-      
+
+      <div className="social-links">
+        <a
+          href="https://github.com/timschmidtdev"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="social-link"
+        >
+          GitHub
+        </a>
+        <a
+          href="https://www.linkedin.com/in/timothyjschmidt/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="social-link"
+        >
+          LinkedIn
+        </a>
+      </div>
+
       {isSubmitted && (
         <div className="success-message">
           Thanks for reaching out! I'll get back to you soon.

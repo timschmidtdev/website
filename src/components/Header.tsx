@@ -13,10 +13,9 @@ function Header({ theme, toggleTheme }: HeaderProps) {
         
         <nav className="nav">
           <a href="#about">About</a>
-          <a href="#skills">Skills</a>
           <a href="#craftcamp">Craft Camp</a>
           <a href="#contact">Contact</a>
-          
+
           <button 
             onClick={toggleTheme} 
             className="theme-toggle"

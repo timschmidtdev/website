@@ -26,41 +26,8 @@ body.dark .hero-subtitle {
 .hero-bio {
   font-size: 1.125rem;
   max-width: 600px;
-  margin: 0 auto 2rem;
+  margin: 0 auto;
   line-height: 1.7;
-}
-
-.social-links {
-  display: flex;
-  gap: 1.5rem;
-  justify-content: center;
-  margin-top: 2rem;
-}
-
-.social-link {
-  padding: 0.75rem 1.5rem;
-  border: 2px solid;
-  border-radius: 6px;
-  font-weight: 500;
-  transition: all 0.2s ease;
-}
-
-body.light .social-link {
-  border-color: var(--border-light);
-}
-
-body.dark .social-link {
-  border-color: var(--border-dark);
-}
-
-body.light .social-link:hover {
-  border-color: var(--accent-light);
-  color: var(--accent-light);
-}
-
-body.dark .social-link:hover {
-  border-color: var(--accent-dark);
-  color: var(--accent-dark);
 }
 
 @media (max-width: 768px) {
