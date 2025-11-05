@@ -1,4 +1,4 @@
-import './Hero.css'
+import "./Hero.css";
 
 function Hero() {
   return (
@@ -7,10 +7,12 @@ function Hero() {
       <p className="hero-subtitle">Software Engineer</p>
       <p className="hero-bio">
         I'm a software engineer.
-        When I'm not working, you'll find me biking, running, or cross country skiing.
+        <br />
+        When I'm not working, you'll find me biking, running, or cross country
+        skiing.
       </p>
     </section>
-  )
+  );
 }
 
-export default Hero
+export default Hero;
