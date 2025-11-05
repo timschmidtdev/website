@@ -6,8 +6,8 @@ function Hero() {
       <h1 className="hero-title">Hi, I'm Tim Schmidt</h1>
       <p className="hero-subtitle">Software Engineer</p>
       <p className="hero-bio">
-        I'm a software engineer who enjoys building great user experiences. 
-        When I'm not coding, you'll find me biking, running, or cross country skiing.
+        I'm a software engineer.
+        When I'm not working, you'll find me biking, running, or cross country skiing.
       </p>
       
       <div className="social-links">
