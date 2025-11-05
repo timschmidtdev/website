@@ -13,6 +13,12 @@ dist-ssr
 .vite
 *.local
 
+# Build files (prevent committing to root)
+# Note: index.html in root is a SOURCE file, not ignored
+/assets/
+/*.js
+/*.css
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
