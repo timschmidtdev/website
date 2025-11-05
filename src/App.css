@@ -1,0 +1,32 @@
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+section {
+  padding: 4rem 0;
+  scroll-margin-top: 80px;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 3rem 0;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+    margin-bottom: 2.5rem;
+  }
+
+  main {
+    padding: 0 1rem;
+  }
+}

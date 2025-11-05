@@ -1,0 +1,60 @@
+.craftcamp {
+  text-align: center;
+}
+
+.craftcamp-content {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid;
+}
+
+body.light .craftcamp-content {
+  background-color: var(--card-light);
+  border-color: var(--border-light);
+}
+
+body.dark .craftcamp-content {
+  background-color: var(--card-dark);
+  border-color: var(--border-dark);
+}
+
+.craftcamp-description {
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+.craftcamp-link {
+  font-weight: 600;
+  transition: color 0.2s ease;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+body.light .craftcamp-link {
+  color: var(--accent-light);
+}
+
+body.dark .craftcamp-link {
+  color: var(--accent-dark);
+}
+
+body.light .craftcamp-link:hover {
+  opacity: 0.8;
+}
+
+body.dark .craftcamp-link:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .craftcamp-content {
+    padding: 1.5rem;
+  }
+  
+  .craftcamp-description {
+    font-size: 1rem;
+  }
+}

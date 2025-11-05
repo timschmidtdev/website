@@ -1,0 +1,55 @@
+:root {
+  --bg-light: #ffffff;
+  --text-light: #1a1a1a;
+  --text-secondary-light: #666666;
+  --border-light: #e0e0e0;
+  --card-light: #f8f8f8;
+  --accent-light: #0066cc;
+  
+  --bg-dark: #0a0a0a;
+  --text-dark: #e5e5e5;
+  --text-secondary-dark: #a0a0a0;
+  --border-dark: #2a2a2a;
+  --card-dark: #1a1a1a;
+  --accent-dark: #4d9fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+
+body.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+}
