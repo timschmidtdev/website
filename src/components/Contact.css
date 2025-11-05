@@ -1,0 +1,117 @@
+.contact {
+  text-align: center;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+body.light .form-input,
+body.light .form-textarea {
+  background-color: var(--bg-light);
+  border-color: var(--border-light);
+  color: var(--text-light);
+}
+
+body.dark .form-input,
+body.dark .form-textarea {
+  background-color: var(--bg-dark);
+  border-color: var(--border-dark);
+  color: var(--text-dark);
+}
+
+body.light .form-input:focus,
+body.light .form-textarea:focus {
+  outline: none;
+  border-color: var(--accent-light);
+}
+
+body.dark .form-input:focus,
+body.dark .form-textarea:focus {
+  outline: none;
+  border-color: var(--accent-dark);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 0.875rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+body.light .submit-button {
+  background-color: var(--accent-light);
+  color: white;
+}
+
+body.dark .submit-button {
+  background-color: var(--accent-dark);
+  color: var(--bg-dark);
+}
+
+.submit-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.success-message {
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+body.light .success-message {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+body.dark .success-message {
+  background-color: #1e3a2e;
+  color: #a8e6cf;
+  border: 1px solid #2d5a45;
+}
+
+@media (max-width: 768px) {
+  .form-input,
+  .form-textarea {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+}
