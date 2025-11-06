@@ -1,17 +1,17 @@
 :root {
-  --bg-light: #ffffff;
-  --text-light: #1a1a1a;
-  --text-secondary-light: #666666;
-  --border-light: #e0e0e0;
-  --card-light: #f8f8f8;
+  --bg-light: #fafaf9;
+  --text-light: #2a2a2a;
+  --text-secondary-light: #6b6b6b;
+  --border-light: #e7e5e4;
+  --card-light: #f5f5f4;
   --accent-light: #0066cc;
-  
-  --bg-dark: #0a0a0a;
-  --text-dark: #e5e5e5;
-  --text-secondary-dark: #a0a0a0;
-  --border-dark: #2a2a2a;
-  --card-dark: #1a1a1a;
-  --accent-dark: #4d9fff;
+
+  --bg-dark: #1a1917;
+  --text-dark: #e7e5e4;
+  --text-secondary-dark: #a8a29e;
+  --border-dark: #292524;
+  --card-dark: #292524;
+  --accent-dark: #60a5fa;
 }
 
 * {
