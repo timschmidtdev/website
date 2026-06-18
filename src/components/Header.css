@@ -54,16 +54,17 @@ body.dark .header {
 .theme-toggle {
   background: none;
   border: none;
-  font-size: 1.25rem;
-  padding: 0.5rem;
+  padding: 0.4rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.2s ease;
+  color: inherit;
+  transition: opacity 0.2s ease;
+  cursor: pointer;
 }
 
 .theme-toggle:hover {
-  transform: scale(1.1);
+  opacity: 0.7;
 }
 
 @media (max-width: 768px) {
